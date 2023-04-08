@@ -1,16 +1,14 @@
 # import dependencies
-import flask
+from flask import Flask, render_template
 
-# create a flask app
-app = flask.Flask(__name__)
+# create a Flask app for heroku
+app = Flask(__name__)
 
-# create a route
+# create a route for the app
 @app.route('/')
-@app.route('/home')
-def home():
-    # return flask.render_template('index.html')
-    return 'Hello World'
+def index():
+    return render_template('index.html')
 
 # run the app
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
