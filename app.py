@@ -5,9 +5,9 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 # create a route for the app
-@app.route('/')
+@app.route('/', methods=['GET'])
 def index():
-    return render_template('index.html')
+    return "please go to /home"
 
 # run the app
 if __name__ == '__main__':
