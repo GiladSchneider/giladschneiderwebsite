@@ -1,6 +1,6 @@
 # import dependencies
 from flask import Flask, render_template, url_for
-import numpy as np
+import torch
 
 # create a Flask app
 app = Flask(__name__)
@@ -11,7 +11,7 @@ app = Flask(__name__)
 @app.route('/index', methods=['GET'])
 def index():
     # get the main_image.jpeg file from the static folder
-    return str(np.random.int(0, 2))
+    return str(torch.__version__)
     # return render_template('index.html')
 
 # create a research route
