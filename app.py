@@ -1,5 +1,6 @@
 # import dependencies
 from flask import Flask, render_template, url_for
+import numpy as np
 
 # create a Flask app
 app = Flask(__name__)
@@ -10,6 +11,7 @@ app = Flask(__name__)
 @app.route('/index', methods=['GET'])
 def index():
     # get the main_image.jpeg file from the static folder
+    np.random.seed(0)
     return render_template('index.html')
 
 # create a research route
