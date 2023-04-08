@@ -1,10 +1,32 @@
 {% extends "main_template.html" %}
 
 {% block content %}
-<div class="container" style="margin-top: 50px;">
-    <h2>
-        Highlighted Projects:
-
-    </h2>
+<div class="card-deck" style="padding: 50px;">
+    <div class="row">
+        <div class="card col border-0">
+        <img class="card-img-top" src="/static/project1_image.png" alt="Card image cap" >
+        <div class="card-body">
+            <h5 class="card-title">Running Game</h5>
+            <p class="card-text">An endless-runner style video game with realistic physics, upgrades, platforming, and sprite sheets.</p>
+            <a href="https://github.com/GiladSchneider/Running-Game" target="_blank">View Project</a>                
+        </div>
+        </div>
+        <div class="card col border-0">
+        <img class="card-img-top" src="/static/project2_image.png" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Patching Holes</h5>
+            <p class="card-text">Two Machine Learning systems, one based on neural networks, the other based on decision trees, that fill-in holes in images.</p>
+            <a href="https://github.com/GiladSchneider/ML-Final-Project" target="_blank">View Project</a>  
+        </div>
+        </div>
+        <div class="card col border-0">
+        <img class="card-img-top" src="/static/project3_image.png" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Personalized Autoencoder</h5>
+            <p class="card-text">Create your very own Autoencoder by inputing parameters and seeing how well your model reconstructs MNIST images.</p>
+            <a href="/" target="_blank">View Project</a>
+        </div>
+        </div>
+    </div>
 </div>
 {% endblock content %}
