@@ -11,8 +11,8 @@ app = Flask(__name__)
 @app.route('/index', methods=['GET'])
 def index():
     # get the main_image.jpeg file from the static folder
-    np.random.seed(0)
-    return render_template('index.html')
+    return str(np.random.int(0, 2))
+    # return render_template('index.html')
 
 # create a research route
 @app.route('/research', methods=['GET'])
