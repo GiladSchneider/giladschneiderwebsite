@@ -5,13 +5,12 @@ from flask import Flask, render_template, url_for
 app = Flask(__name__)
 
 # create a home route
-@app.route('/', methods=['GET', 'POST'])
-@app.route('/home', methods=['GET', 'POST'])
-@app.route('/index', methods=['GET', 'POST'])
+@app.route('/', methods=['GET'])
+@app.route('/home', methods=['GET'])
+@app.route('/index', methods=['GET'])
 def index():
     # get the main_image.jpeg file from the static folder
-    image_file = url_for('static', filename='images/main_image.jpeg')
-    return render_template('index.html', image_file=image_file)
+    return render_template('index.html')
 
 # create a research route
 @app.route('/research', methods=['GET'])
