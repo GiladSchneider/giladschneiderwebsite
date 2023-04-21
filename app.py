@@ -21,11 +21,6 @@ def research():
 def projects():
     return render_template('projects.html')
 
-# create a games route
-@app.route('/games', methods=['GET'])
-def games():
-    return render_template('games.html')
-
 # create a cv route
 @app.route('/cv', methods=['GET'])
 def cv():
